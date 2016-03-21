@@ -1,0 +1,17 @@
+language: java
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - ".autoconf"
+  - "$HOME/.m2"
+deploy:
+  provider: releases
+  api_key:
+    secure: wFLYUt/bT6Mo0GEt4P5BTd68AW6w184mBzamy9aFg4yvSlMfIOulptgoiPQSOfTJ5+RSloBScL8iOAEAXWDuC3/YpqqyYS6+JH8HlbQ1BXPtWF2+9kfABkVKo/GusMrVRw18aPDPKEb/Ggk8oN75ZzwmhD2mw++hgHR8luSTP7gsJW4GAO9fLd+QlH1fIiuGBUFKslPwQM9QK38AxVVoiYUqQj5ZAlIWGwt/IjT+TvsG5MbGF5/7ELu3+RSb4SWlksQSgBgOeeLU3wq+EI/UZ8lOuwF6u8kLHbznT6xMCzMJ528LtgG0s1UddQsZo6tsmEsa7l6tFr+il7ExysXKWTn4WhAN6utmIAzAj2+nsb8kkXJfcQmRKyi0nP/rLDpQytabWHyfZrAVHuxUTZFfFbztS39we1T1kpRHpvydOtEGqLGFuRIbV57EFg+vmST/pFM2n7wn7TNMc6aBCcaGSLAHHIZ7DBkoE8me6XLGZUgD88EtTDMQhL342KyEjUOJzjX6QaO08SZFOckm42PFoCADIYQ20syTjClyhcw9cxfTUc0oAIoCQMrHMPqa1kJkULIph6SUH+gY42TztrWfBMleenMYlPRuRL9cMnxQ1GVlzIV+AFqq4QltHB3JHEF5sQ9edWIaLQMP1HT/+nC7ICM2Ux7Hec3ULuGjQ9E9bEM=
+  file:
+    - "build/libs/bekaert.jar"
+  on:
+    repo: Qkyrie/FileFilter
+    tags: true
+    branch: master
