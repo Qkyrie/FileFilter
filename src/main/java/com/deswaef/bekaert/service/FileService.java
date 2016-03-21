@@ -20,8 +20,11 @@ public class FileService {
 
     private Log LOG = LogFactory.getLog(FileService.class);
 
+
     public List<File> getFiles() {
         LOG.info("going to look for files in input directory");
+        List<File> exceptionNotFounds = new ArrayList<>();
+
         File file = new File(INPUT_FILE);
         if (file.exists()) {
             BufferedReader br = null;
@@ -44,6 +47,10 @@ public class FileService {
             LOG.error("output file does not exist");
             return new ArrayList<>();
         }
+    }
+
+    private void writeExceptionNotFounds(List<File> exceptionNotFounds) {
+
     }
 
 }
