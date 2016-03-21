@@ -41,7 +41,7 @@ public class FileService {
                 }
             }
         } else {
-            System.out.println("output file does not exist");
+            LOG.error("output file does not exist");
             return new ArrayList<>();
         }
     }
