@@ -13,8 +13,8 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'gs-spring-boot'
-    version =  '0.1.0'
+    baseName = 'bekaert'
+    version =  null
 }
 
 repositories {
@@ -28,6 +28,10 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     // end::tests[]
+}
+
+springBoot {
+    executable = true
 }
 
 task wrapper(type: Wrapper) {

@@ -46,7 +46,6 @@ public class BekaertApplication implements CommandLineRunner {
                     }
                 });
         LOG.info("Done");
-        System.exit(0);
     }
 
 
