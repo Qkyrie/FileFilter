@@ -21,7 +21,7 @@ public class FileService {
     private Log LOG = LogFactory.getLog(FileService.class);
 
     public List<File> getFiles() {
-        System.out.println("going to look for files of 2015");
+        LOG.info("going to look for files in input directory");
         File file = new File(INPUT_FILE);
         if (file.exists()) {
             BufferedReader br = null;

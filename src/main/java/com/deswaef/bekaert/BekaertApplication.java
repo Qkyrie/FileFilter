@@ -25,6 +25,13 @@ public class BekaertApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         List<File> files = fileService.getFiles();
+
+        File f = new File("output");
+        if (!f.exists()) {
+            LOG.info("creating the output directory");
+            f.mkdir();
+        }
+
         files
                 .forEach(x -> {
                     if (!x.exists()) {
@@ -38,6 +45,8 @@ public class BekaertApplication implements CommandLineRunner {
                         }
                     }
                 });
+        LOG.info("Done");
+        System.exit(0);
     }
 
 
